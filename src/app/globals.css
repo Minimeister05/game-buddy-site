@@ -9,20 +9,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
+  --font-heading: var(--font-display);
+  --font-display: var(--font-display);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -39,6 +27,14 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  /* Identidade do Game Buddy */
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-mint: var(--mint);
+  --color-stage: var(--stage);
+  --color-bubble: var(--bubble);
+  --color-bubble-foreground: var(--bubble-foreground);
+  --color-bubble-edge: var(--bubble-edge);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -48,86 +44,150 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+@theme {
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 48s linear infinite;
+  --animate-twinkle: twinkle 3.2s ease-in-out infinite;
+  --animate-pop: pop 420ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.9; }
+  }
+  @keyframes pop {
+    0% { transform: scale(0.82); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+}
+
+/* Claro: lilás suave. Escuro: a noite de jogatina do app. */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --background: #f7f5ff;
+  --foreground: #17152b;
+  --card: #ffffff;
+  --card-foreground: #17152b;
+  --popover: #ffffff;
+  --popover-foreground: #17152b;
+  --primary: #6c54d6;
+  --primary-foreground: #ffffff;
+  --secondary: #ece8fd;
+  --secondary-foreground: #2b2552;
+  --muted: #eeebf8;
+  --muted-foreground: #5f5a78;
+  --accent: #ece8fd;
+  --accent-foreground: #2b2552;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --border: #e1dbf4;
+  --input: #e1dbf4;
+  --ring: #8b76f0;
+  --radius: 0.75rem;
+  --gold: #9a6b12;
+  --gold-soft: #f8ecd0;
+  --mint: #1f8f6f;
+  --stage: #ebe6ff;
+  --bubble: #191a2b;
+  --bubble-foreground: #fcf9ff;
+  --bubble-edge: #bca4ff;
+  --grid-line: rgb(108 84 214 / 0.16);
+  --glow-a: rgb(139 118 240 / 0.34);
+  --glow-b: rgb(98 205 172 / 0.24);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: #0b0d14;
+  --foreground: #f1f2fa;
+  --card: #141824;
+  --card-foreground: #f1f2fa;
+  --popover: #141824;
+  --popover-foreground: #f1f2fa;
+  --primary: #bbacfa;
+  --primary-foreground: #191327;
+  --secondary: #1d2130;
+  --secondary-foreground: #e6e2fa;
+  --muted: #1a1e2b;
+  --muted-foreground: #9fa2b6;
+  --accent: #221d33;
+  --accent-foreground: #e6e2fa;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --border: #262b3b;
+  --input: #2c3142;
+  --ring: #bbacfa;
+  --gold: #f0d293;
+  --gold-soft: rgb(240 210 147 / 0.12);
+  --mint: #8fe4c4;
+  --stage: #1a1628;
+  --bubble: #191a2b;
+  --bubble-foreground: #fcf9ff;
+  --bubble-edge: #bca4ff;
+  --grid-line: rgb(187 172 250 / 0.14);
+  --glow-a: rgb(139 118 240 / 0.32);
+  --glow-b: rgb(80 200 170 / 0.16);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
   }
-  button:not(:disabled), [role="button"]:not(:disabled) {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+}
+
+@layer components {
+  /* Chão quadriculado em perspectiva, igual à arena do app */
+  .arena-floor {
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 44px 44px;
+    transform: perspective(380px) rotateX(62deg);
+    transform-origin: center bottom;
+    mask-image: linear-gradient(to top, black 30%, transparent 95%);
+  }
+  .glow-backdrop {
+    background:
+      radial-gradient(40rem 22rem at 18% 0%, var(--glow-a), transparent 70%),
+      radial-gradient(34rem 20rem at 92% 12%, var(--glow-b), transparent 70%);
+  }
+  .text-gradient {
+    background: linear-gradient(100deg, var(--primary) 10%, #f2a6de 55%, #ffd083 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .marquee-mask {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
   html {
-    @apply font-sans;
+    scroll-behavior: auto;
+  }
+  .animate-float,
+  .animate-marquee,
+  .animate-twinkle,
+  .animate-pop {
+    animation: none !important;
   }
 }

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -16,30 +16,37 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Títulos com personalidade: redonda, divertida e ainda legível.
+const display = Bricolage_Grotesque({
+  variable: "--font-display",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: site.name, template: `%s · ${site.name}` },
+  title: { default: `${site.name} · seu parceiro de partida`, template: `%s · ${site.name}` },
   description: site.description,
   applicationName: site.name,
+  keywords: ["game buddy", "mascote", "desktop pet", "rocket league", "overlay", "pet virtual", "jogos"],
   openGraph: {
     type: "website",
     locale: site.locale,
     url: "/",
     siteName: site.name,
-    title: site.name,
+    title: `${site.name} · seu parceiro de partida`,
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: site.name,
+    title: `${site.name} · seu parceiro de partida`,
     description: site.description,
   },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    { media: "(prefers-color-scheme: light)", color: "#f7f5ff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0d14" },
   ],
 };
 
@@ -48,10 +55,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-BR"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${display.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
         <Analytics />
