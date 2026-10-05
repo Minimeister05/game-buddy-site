@@ -12,9 +12,9 @@ export const site = {
   initial: "G",
   // Versão pra baixar. Trocou o zip em public/downloads? Atualiza aqui.
   download: {
-    version: "0.7",
-    href: "/downloads/GameBuddy-0.7-Windows.zip",
-    size: "138 KB",
+    version: "0.8",
+    href: "/downloads/GameBuddy-0.8-Windows.zip",
+    size: "156 KB",
     requirements: "Windows 10 ou 11",
   },
   // Link da página na loja do Overwolf. Enquanto for null, o site mostra "em breve".

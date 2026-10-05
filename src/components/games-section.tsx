@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check, Clock, Gamepad2, MonitorPlay, Zap } from "lucide-react";
+import { ArrowUpRight, Check, Crosshair, Gamepad2, MonitorPlay, Pickaxe, Zap } from "lucide-react";
 import { DownloadButton } from "@/components/download-button";
 import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
@@ -8,23 +8,29 @@ const appGames = [
     icon: Zap,
     title: "Rocket League",
     tag: "Reage sozinho",
-    text: "Gol, gol sofrido, bola na trave e resultado chegam pela conexão oficial do próprio jogo. Melhor em janela sem bordas.",
+    text: "Gol, gol sofrido, bola na trave e resultado, pela conexão oficial do próprio jogo. Jogue em janela sem bordas.",
+  },
+  {
+    icon: Crosshair,
+    title: "Counter-Strike 2",
+    tag: "Reage sozinho",
+    text: "Abate, morte, round e resultado, pela integração oficial da Valve. Jogue em janela preenchida.",
+  },
+  {
+    icon: Pickaxe,
+    title: "Minecraft Java",
+    tag: "Reage sozinho",
+    text: "Comemora suas conquistas e sofre com suas mortes. Funciona com CurseForge e modpacks, sem instalar mod.",
   },
   {
     icon: MonitorPlay,
     title: "Qualquer jogo em janela ou sem bordas",
     tag: "Companhia",
-    text: "O buddy fica do seu lado durante a partida. Quer testar? Ctrl + Alt + V faz ele comemorar no meio do jogo.",
-  },
-  {
-    icon: Clock,
-    title: "CS2 e Fortnite em tela cheia",
-    tag: "Em teste",
-    text: "Nos jogos mais novos o Windows deixa o buddy aparecer até em tela cheia. Tamos testando agora.",
+    text: "O buddy fica do seu lado durante a partida, e Ctrl + Alt + V faz ele comemorar no meio do jogo.",
   },
 ];
 
-const overwolfGames = ["Rocket League", "Valorant", "League of Legends", "Counter-Strike 2", "Fortnite"];
+const overwolfGames = ["Valorant", "League of Legends", "Fortnite", "Rocket League em tela cheia", "CS2 em tela cheia"];
 
 export function GamesSection() {
   return (
