@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check, Crosshair, Gamepad2, MonitorPlay, Pickaxe, Zap } from "lucide-react";
+import { ArrowUpRight, Check, Crosshair, Gamepad2, MonitorPlay, Zap } from "lucide-react";
 import { DownloadButton } from "@/components/download-button";
 import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
@@ -15,12 +15,6 @@ const appGames = [
     title: "Counter-Strike 2",
     tag: "Reage sozinho",
     text: "Abate, morte, round e resultado, pela integração oficial da Valve. Jogue em janela preenchida.",
-  },
-  {
-    icon: Pickaxe,
-    title: "Minecraft Java",
-    tag: "Reage sozinho",
-    text: "Comemora suas conquistas, sofre com suas mortes e fica impressionado quando você acha diamante. Funciona com CurseForge e modpacks, sem instalar mod.",
   },
   {
     icon: MonitorPlay,

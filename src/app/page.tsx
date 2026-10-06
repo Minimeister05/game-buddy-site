@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 const steps = [
   { icon: Download, title: "Baixe e abra", text: "Sem instalar e sem criar conta. Extraiu, abriu, pronto." },
   { icon: MousePointerClick, title: "Escolha seu buddy", text: "Sete personagens, cada um com seu jeito, suas falas e suas manias." },
-  { icon: Sparkles, title: "Bora jogar", text: "No Rocket League, no CS2 e no Minecraft ele reage sozinho à partida." },
+  { icon: Sparkles, title: "Bora jogar", text: "No Rocket League e no CS2 ele reage sozinho à partida." },
 ];
 
 const scenes = [

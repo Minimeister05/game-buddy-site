@@ -3,7 +3,7 @@ import { Plus } from "lucide-react";
 const questions = [
   {
     q: "Dá ban?",
-    a: "Não. O Game Buddy não mexe no jogo, não injeta nada e não lê a memória dele. No Rocket League e no CS2 ele usa as integrações oficiais dos próprios jogos, e no Minecraft só lê o registro que o jogo já escreve.",
+    a: "Não. O Game Buddy não mexe no jogo, não injeta nada e não lê a memória dele. No Rocket League e no CS2 ele usa as integrações oficiais dos próprios jogos.",
   },
   {
     q: "Preciso do Overwolf?",
