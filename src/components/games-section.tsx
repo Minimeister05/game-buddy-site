@@ -20,7 +20,7 @@ const appGames = [
     icon: Pickaxe,
     title: "Minecraft Java",
     tag: "Reage sozinho",
-    text: "Comemora suas conquistas e sofre com suas mortes. Funciona com CurseForge e modpacks, sem instalar mod.",
+    text: "Comemora suas conquistas, sofre com suas mortes e fica impressionado quando você acha diamante. Funciona com CurseForge e modpacks, sem instalar mod.",
   },
   {
     icon: MonitorPlay,
