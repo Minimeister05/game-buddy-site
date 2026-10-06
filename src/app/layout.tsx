@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title: { default: `${site.name} · seu parceiro de partida`, template: `%s · ${site.name}` },
   description: site.description,
   applicationName: site.name,
-  keywords: ["game buddy", "mascote", "desktop pet", "rocket league", "overlay", "pet virtual", "jogos"],
+  keywords: ["game buddy", "mascote", "desktop pet", "rocket league", "cs2", "overlay", "pet virtual", "jogos", "streamer", "obs", "twitch", "alertas de live"],
   openGraph: {
     type: "website",
     locale: site.locale,

@@ -6,8 +6,16 @@ const questions = [
     a: "Não. O Game Buddy não mexe no jogo, não injeta nada e não lê a memória dele. No Rocket League e no CS2 ele usa as integrações oficiais dos próprios jogos.",
   },
   {
-    q: "Preciso do Overwolf?",
-    a: "Não. O app funciona sozinho. A versão Overwolf vai ser opcional, pra quem quer o buddy dentro do jogo em tela cheia exclusiva e reações automáticas em mais jogos.",
+    q: "Quando dá pra baixar?",
+    a: "Logo. A prévia tá fechada com os primeiros jogadores e streamers pra gente acertar tudo antes. Quando abrir, o botão aparece aqui no site.",
+  },
+  {
+    q: "Funciona na minha live?",
+    a: "Funciona. No modo streamer ele entra no OBS como fonte de navegador e agradece follow, sub, bits, raid e resgate de pontos da Twitch, falando o nome de quem mandou. YouTube, Kick e doações estão chegando.",
+  },
+  {
+    q: "Preciso instalar mais alguma coisa?",
+    a: "Não. O app funciona sozinho: não precisa de Overwolf nem de conta.",
   },
   {
     q: "Apareceu “O Windows protegeu o computador”. E agora?",
@@ -15,7 +23,7 @@ const questions = [
   },
   {
     q: "Funciona em tela cheia?",
-    a: "Em janela e em janela sem bordas, sempre. Em tela cheia depende do jogo: quando ele usa tela cheia exclusiva, como o Rocket League, o Windows esconde qualquer janela por cima. Aí use janela sem bordas, que fica igual na tela, ou a versão Overwolf quando chegar.",
+    a: "Em janela e em janela sem bordas, sempre. Em tela cheia depende do jogo: quando ele usa tela cheia exclusiva, como o Rocket League, o Windows esconde qualquer janela por cima. Aí use janela sem bordas, que fica igual na tela.",
   },
   {
     q: "É grátis?",
@@ -23,7 +31,7 @@ const questions = [
   },
   {
     q: "Ele manda meus dados pra algum lugar?",
-    a: "Não. Tudo roda no seu PC e o app não manda nada pra internet.",
+    a: "Não. Tudo roda no seu PC. No modo streamer, o app só conversa direto com a Twitch pra receber os alertas da sua live.",
   },
 ];
 

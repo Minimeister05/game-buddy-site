@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Download } from "lucide-react";
+import { Radio } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { portraitUrl } from "@/lib/buddies";
@@ -9,6 +9,7 @@ import { site } from "@/lib/site";
 const links = [
   { href: "#como-funciona", label: "Como funciona" },
   { href: "#jogos", label: "Jogos" },
+  { href: "#streamer", label: "Pra streamers" },
   { href: "#buddies", label: "Buddies" },
   { href: "#duvidas", label: "Dúvidas" },
 ];
@@ -40,9 +41,9 @@ export function SiteHeader() {
         <div className="flex items-center gap-1.5">
           <ThemeToggle />
           <Button asChild className="h-9 rounded-lg px-3">
-            <a href={site.download.href} download aria-label="Baixar o Game Buddy">
-              <Download />
-              <span className="hidden sm:inline">Baixar</span>
+            <a href="#streamer" aria-label="Ver o modo streamer">
+              <Radio />
+              <span className="hidden sm:inline">Modo streamer</span>
             </a>
           </Button>
         </div>

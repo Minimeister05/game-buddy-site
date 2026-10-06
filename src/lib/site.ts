@@ -2,7 +2,7 @@
 export const site = {
   name: "Game Buddy",
   description:
-    "Um buddy que mora na sua tela e joga junto com você: comemora seus gols, sofre junto e chama você pra jogar. Grátis pra Windows.",
+    "Um buddy que mora na sua tela e joga junto com você: comemora seus gols, sofre junto e agradece quem apoia sua live. Grátis pra Windows.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.VERCEL_PROJECT_PRODUCTION_URL
@@ -10,13 +10,13 @@ export const site = {
       : "http://localhost:3000"),
   locale: "pt_BR",
   initial: "G",
-  // Versão pra baixar. Trocou o zip em public/downloads? Atualiza aqui.
+  // Enquanto a prévia estiver fechada com os testers, open fica false e os botões mostram "Em breve".
+  // Pra abrir: coloca o zip em public/downloads, ajusta href, version e size e muda open pra true.
   download: {
-    version: "0.9.2",
-    href: "/downloads/GameBuddy-0.9.2-Windows.zip",
-    size: "150 KB",
+    open: false as boolean,
+    version: "0.10",
+    href: "/downloads/GameBuddy-0.10-Windows.zip",
+    size: "172 KB",
     requirements: "Windows 10 ou 11",
   },
-  // Link da página na loja do Overwolf. Enquanto for null, o site mostra "em breve".
-  overwolfUrl: null as string | null,
 };

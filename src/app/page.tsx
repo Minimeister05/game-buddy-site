@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDown, Download, Gift, Lock, MousePointerClick, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowDown, Gift, Lock, MousePointerClick, PackageOpen, ShieldCheck, Sparkles } from "lucide-react";
 import { BuddyGallery } from "@/components/buddy-gallery";
 import { BuddyStage } from "@/components/buddy-stage";
 import { DownloadButton } from "@/components/download-button";
@@ -7,13 +7,14 @@ import { Faq } from "@/components/faq";
 import { GamesSection } from "@/components/games-section";
 import { PhraseMarquee } from "@/components/phrase-marquee";
 import { SiteHeader } from "@/components/site-header";
+import { StreamerSection } from "@/components/streamer-section";
 import { buddies, portraitUrl } from "@/lib/buddies";
 import { site } from "@/lib/site";
 
 const steps = [
-  { icon: Download, title: "Baixe e abra", text: "Sem instalar e sem criar conta. Extraiu, abriu, pronto." },
+  { icon: PackageOpen, title: "Abriu, tá pronto", text: "Sem instalar e sem criar conta. Extraiu, abriu, pronto." },
   { icon: MousePointerClick, title: "Escolha seu buddy", text: "Sete personagens, cada um com seu jeito, suas falas e suas manias." },
-  { icon: Sparkles, title: "Bora jogar", text: "No Rocket League e no CS2 ele reage sozinho à partida." },
+  { icon: Sparkles, title: "Bora jogar (ou fazer live)", text: "No Rocket League e no CS2 ele reage sozinho à partida. Na live, agradece quem apoia o canal." },
 ];
 
 const scenes = [
@@ -50,7 +51,7 @@ export default function Home() {
           <div className="min-w-0">
             <span className="inline-flex items-center gap-2 rounded-full border bg-card/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
               <span className="size-1.5 animate-pulse rounded-full bg-mint" />
-              Prévia {site.download.version} liberada · grátis pra Windows
+              {site.download.open ? `Prévia ${site.download.version} liberada · grátis pra Windows` : "Em teste com os primeiros jogadores e streamers"}
             </span>
             <h1 className="mt-6 text-balance font-display text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl">
               Um buddy que <span className="text-gradient">joga junto</span> com você.
@@ -128,9 +129,13 @@ export default function Home() {
           <SectionTitle
             eyebrow="JOGOS"
             title="Onde ele joga com você."
-            text="Baixe o app pra começar agora. Pra tela cheia exclusiva e mais jogos, a versão Overwolf tá chegando."
+            text="Nos jogos com integração oficial ele reage sozinho. Nos outros, fica do seu lado fazendo companhia."
           />
           <GamesSection />
+        </section>
+
+        <section id="streamer" className="mx-auto w-full max-w-6xl scroll-mt-20 px-4 pb-20 sm:px-6 sm:pb-28">
+          <StreamerSection />
         </section>
 
         <section id="buddies" className="mx-auto w-full max-w-6xl scroll-mt-20 px-4 pb-20 sm:px-6 sm:pb-28">
@@ -168,7 +173,9 @@ export default function Home() {
               Bora jogar junto?
             </h2>
             <p className="relative mx-auto mt-4 max-w-md text-muted-foreground">
-              Baixe, escolha seu buddy e manda um print dele comemorando pra gente.
+              {site.download.open
+                ? "Baixe, escolha seu buddy e manda um print dele comemorando pra gente."
+                : "Tá quase. A prévia tá fechada com os primeiros testers e libera aqui logo logo."}
             </p>
             <DownloadButton center className="relative mt-8" />
           </div>
@@ -180,7 +187,7 @@ export default function Home() {
           <p>
             <span className="font-display font-bold text-foreground">game buddy.</span> Feito no Brasil pra jogar junto.
           </p>
-          <p className="text-xs">Não é afiliado à Psyonix, Epic Games, Valve, Riot Games ou Overwolf.</p>
+          <p className="text-xs">Não é afiliado à Psyonix, Epic Games, Valve, Riot Games ou Twitch.</p>
         </div>
       </footer>
     </div>
